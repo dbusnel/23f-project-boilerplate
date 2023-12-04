@@ -1,16 +1,13 @@
 USE Symphony;
 
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (1, 'Selena', 'Legrand', 'slegrand0@upenn.edu', '283-877-7501', 'San Narciso');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (2, 'Ailyn', 'Gerriets', 'agerriets1@infoseek.co.jp', '283-902-8751', 'Albrechtice');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (3, 'Claudelle', 'Booth-Jarvis', 'cboothjarvis2@businessweek.com', '124-405-0225', 'Lingbei');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (4, 'Alleen', 'Thorndale', 'athorndale3@yelp.com', '100-171-4580', 'Zalaegerszeg');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (5, 'Ambrose', 'Sabatini', 'asabatini4@about.me', '919-926-1525', 'Betio Village');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (6, 'Rowney', 'Gallant', 'rgallant5@imageshack.us', '823-832-7084', 'Teresa');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (7, 'Gipsy', 'Jeanesson', 'gjeanesson6@mysql.com', '554-355-1859', 'Marquard');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (8, 'Trefor', 'Mannakee', 'tmannakee7@nhs.uk', '579-277-4548', 'Lendava');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (9, 'Theo', 'Gabbitus', 'tgabbitus8@mac.com', '561-889-8461', 'Caluquembe');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (10, 'Rhetta', 'Sallnow', 'rsallnow9@aboutads.info', '123-235-5179', 'Chengdong');
-insert into Artist (artist_id, first_name, last_name, email, phone, city) values (11, 'Bev', 'Loverock', 'bloverocka@booking.com', '340-185-0698', 'Cervantes');
+insert into Artist (artist_id, first_name, last_name, email, phone, city) values (4, 'Selena', 'Legrand', 'slegrand0@upenn.edu', '283-877-7501', 'San Narciso');
+insert into Artist (artist_id, first_name, last_name, email, phone, city) values (5, 'Ailyn', 'Gerriets', 'agerriets1@infoseek.co.jp', '283-902-8751', 'Albrechtice');
+insert into Artist (artist_id, first_name, last_name, email, phone, city) values (6, 'Claudelle', 'Booth-Jarvis', 'cboothjarvis2@businessweek.com', '124-405-0225', 'Lingbei');
+insert into Artist (artist_id, first_name, last_name, email, phone, city) values (7, 'Alleen', 'Thorndale', 'athorndale3@yelp.com', '100-171-4580', 'Zalaegerszeg');
+insert into Artist (artist_id, first_name, last_name, email, phone, city) values (8, 'Ambrose', 'Sabatini', 'asabatini4@about.me', '919-926-1525', 'Betio Village');
+insert into Artist (artist_id, first_name, last_name, email, phone, city) values (9, 'Rowney', 'Gallant', 'rgallant5@imageshack.us', '823-832-7084', 'Teresa');
+insert into Artist (artist_id, first_name, last_name, email, phone, city) values (10, 'Gipsy', 'Jeanesson', 'gjeanesson6@mysql.com', '554-355-1859', 'Marquard');
+insert into Artist (artist_id, first_name, last_name, email, phone, city) values (11, 'Trefor', 'Mannakee', 'tmannakee7@nhs.uk', '579-277-4548', 'Lendava');
 insert into Artist (artist_id, first_name, last_name, email, phone, city) values (12, 'Ernest', 'Buer', 'ebuerb@seattletimes.com', '845-642-1680', 'Tawali');
 insert into Artist (artist_id, first_name, last_name, email, phone, city) values (13, 'Laurella', 'Sagg', 'lsaggc@un.org', '950-894-5274', 'Scholkine');
 insert into Artist (artist_id, first_name, last_name, email, phone, city) values (14, 'Jolene', 'O''Coskerry', 'jocoskerryd@fc2.com', '142-209-6355', 'Groznyy');

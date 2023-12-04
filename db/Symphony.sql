@@ -1,6 +1,9 @@
 CREATE DATABASE Symphony;
 USE Symphony;
 
+GRANT ALL PRIVILEGES ON Symphony.* TO 'webapp'@'%';
+flush privileges;
+
 CREATE TABLE User (
     user_id     INTEGER AUTO_INCREMENT PRIMARY KEY,
     first_name  TINYTEXT NOT NULL,
@@ -64,6 +67,9 @@ CREATE TABLE User_Profile (
 
     PRIMARY KEY (user_id, display_name),
     CONSTRAINT fk_user_profile FOREIGN KEY (user_id) REFERENCES User (user_id)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+    CONSTRAIN fk_favorite_artist FOREIGN KEY (favorite_artist) REFERENCES Artist (artist_id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );
