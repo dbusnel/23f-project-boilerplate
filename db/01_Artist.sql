@@ -1,6 +1,5 @@
 USE Symphony;
 
-<<<<<<< HEAD
 insert into Artist (artist_id, first_name, last_name, email, phone, city) values (4, 'Selena', 'Legrand', 'slegrand0@upenn.edu', '283-877-7501', 'San Narciso');
 insert into Artist (artist_id, first_name, last_name, email, phone, city) values (5, 'Ailyn', 'Gerriets', 'agerriets1@infoseek.co.jp', '283-902-8751', 'Albrechtice');
 insert into Artist (artist_id, first_name, last_name, email, phone, city) values (6, 'Claudelle', 'Booth-Jarvis', 'cboothjarvis2@businessweek.com', '124-405-0225', 'Lingbei');
@@ -48,7 +47,6 @@ insert into Artist (artist_id, first_name, last_name, email, phone, city) values
 insert into Artist (artist_id, first_name, last_name, email, phone, city) values (48, 'Mitchel', 'Tisun', 'mtisun1b@livejournal.com', '381-427-5208', 'Kungshamn');
 insert into Artist (artist_id, first_name, last_name, email, phone, city) values (49, 'Haydon', 'Purviss', 'hpurviss1c@scribd.com', '151-730-6010', 'Putrajaya');
 insert into Artist (artist_id, first_name, last_name, email, phone, city) values (50, 'Luke', 'Vernazza', 'lvernazza1d@weebly.com', '514-711-0633', 'Santa Cecília');
-=======
 insert into Artist (first_name, last_name, email, phone, city) values ('Devonna', 'Scoyne', 'dscoyne0@boston.com', '340-793-5818', 'Reshetikha');
 insert into Artist (first_name, last_name, email, phone, city) values ('Megen', 'Fulun', 'mfulun1@vk.com', '713-404-9686', 'Bunigeulis');
 insert into Artist (first_name, last_name, email, phone, city) values ('Meris', 'Beddie', 'mbeddie2@stumbleupon.com', '926-685-8259', 'Khóra');
@@ -99,4 +97,3 @@ insert into Artist (first_name, last_name, email, phone, city) values ('Byran', 
 insert into Artist (first_name, last_name, email, phone, city) values ('Joaquin', 'Ping', 'jping1b@deliciousdays.com', '906-274-8543', 'Xinchengzi');
 insert into Artist (first_name, last_name, email, phone, city) values ('Norina', 'Izakson', 'nizakson1c@google.co.jp', '283-376-9516', 'Daphu');
 insert into Artist (first_name, last_name, email, phone, city) values ('Myrtle', 'Dafforne', 'mdafforne1d@topsy.com', '143-852-1414', 'Don Chedi');
->>>>>>> 61ce6a48cb262d06f1b72af89c83b29852c44235
