@@ -81,6 +81,7 @@ def get_likes(userid):
 
         return jsonify(json_data)
     elif request.method == 'POST':
+        cursor = db.get_db().cursor()
         user_id = userid
         liked_id = data['liked_id']
 
@@ -94,6 +95,7 @@ def get_likes(userid):
         cursor.execute(query)
         db.get_db().commit()
     elif request.method == 'DELETE':
+        cursor = db.get_db().cursor()
         liked_id = data['liked_id']
 
         query = 'DELETE FROM User_Likes where liked_id = ' + liked_id
