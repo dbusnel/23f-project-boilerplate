@@ -7,7 +7,7 @@ artists = Blueprint('artists', __name__)
 
 # Get all the products from the database
 @artists.route('/artists', methods=['GET'])
-def get_products():
+def get_artists():
     # get a cursor object from the database
     cursor = db.get_db().cursor()
 
@@ -135,7 +135,7 @@ def getPosts(id):
 
 # Manage artist post with given ID
 @artists.route('/artists/<id>/posts/<postID>', methods=['GET', 'DELETE'])
-def getPosts(id, postID):
+def getPostFromID(id, postID):
     # get a cursor object from the database
     cursor = db.get_db().cursor()
     if request.method == 'GET':
