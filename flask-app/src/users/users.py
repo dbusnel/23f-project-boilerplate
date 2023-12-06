@@ -26,7 +26,7 @@ def get_users():
 
 # get user with id
 @users.route('/users/<id>', methods=['GET', 'POST'])
-def get_users(id):
+def get_user_with_id(id):
     if request.method == 'GET':
         #obtain cursor
         cursor = db.get_db().cursor()
@@ -66,7 +66,7 @@ def issue_report(userid):
 
 # get user likes
 @users.route('/users/<userid>/likes/', methods=['GET', 'POST', 'DELETE'])
-def getLikes(userid):
+def get_likes(userid):
     data = request.json
     current_app.logger.info(data)
     if request.method == 'GET':
@@ -103,7 +103,7 @@ def getLikes(userid):
 
 # get users who like the given user
 @users.route('/users/<id>/liked-by', methods=['GET'])
-def get_users(id):
+def get_users_liked_by(id):
     #obtain cursor
     cursor = db.get_db().cursor()
 
@@ -123,7 +123,7 @@ def get_users(id):
 # get 'matches' -- users who liked each other. Return the other users
 # get users who like the given user
 @users.route('/users/<id>/matches', methods=['GET'])
-def get_users(id):
+def get_matches(id):
     #obtain cursor
     cursor = db.get_db().cursor()
     if request.method == 'GET':

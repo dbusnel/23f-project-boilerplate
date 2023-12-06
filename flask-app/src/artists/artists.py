@@ -6,7 +6,7 @@ from src import db
 artists = Blueprint('artists', __name__)
 
 # Get all the products from the database
-@products.route('/artists', methods=['GET'])
+@artists.route('/artists', methods=['GET'])
 def get_products():
     # get a cursor object from the database
     cursor = db.get_db().cursor()
