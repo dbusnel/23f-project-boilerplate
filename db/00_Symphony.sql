@@ -109,7 +109,18 @@ CREATE TABLE Artist_Profile (
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );
-
+CREATE TABLE Messages (
+    sender_id    INTEGER,
+    recipient_id INTEGER,
+    content      TEXT NOT NULL,
+    PRIMARY KEY (sender_id, recipient_id),
+    CONSTRAINT fk_sender FOREIGN KEY (sender_id) REFERENCES User (user_id)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+    CONSTRAINT fk_recipient FOREIGN KEY (recipient_id) REFERENCES User (user_id)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE  
+);
 INSERT INTO Artist_Profile
 VALUES (1, 'Korn', 'If you listen to us you probably aren''t allowed near schools.', NULL);
 INSERT INTO Artist_Profile
@@ -252,6 +263,7 @@ CREATE TABLE Concert_Profile (
       date              DATETIME,
       bio               TEXT,
       photo             BLOB,
+      ticket_stock      INTEGER,
 
       PRIMARY KEY (concert_id, concert_name),
       CONSTRAINT fk_concert_profile FOREIGN KEY (concert_id) REFERENCES Concert_Info (concert_id)
