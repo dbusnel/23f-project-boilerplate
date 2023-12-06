@@ -35,6 +35,7 @@ def create_app():
     # Import the various Beluprint Objects
     from src.customers.customers import customers
     from src.products.products  import products
+    from src.users.users        import users
 
     # Register the routes from each Blueprint with the app object
     # and give a url prefix to each
