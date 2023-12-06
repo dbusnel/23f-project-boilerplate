@@ -274,11 +274,11 @@ CREATE TABLE Concert_Profile (
           ON DELETE CASCADE
 );
 INSERT INTO Concert_Profile
-VALUES(1, 'KORN KILLS THE WORLD TOUR - BOSTON', 1, 35, '2023-12-31 20:00:00', 'KORN celebrates the release of their new Untitled album with their biggest tour yet!', NULL);
+VALUES(1, 'KORN KILLS THE WORLD TOUR - BOSTON', 1, 35, '2023-12-31 20:00:00', 'KORN celebrates the release of their new Untitled album with their biggest tour yet!', NULL, 230);
 INSERT INTO Concert_Profile
-VALUES(2, 'BATH SALTS MANIA', 3, 12, '2024-4-12 14:00:00', 'See your favorite metal bands up close and personal at the 2024 annual Bath Salts tour!', NULL);
+VALUES(2, 'BATH SALTS MANIA', 3, 12, '2024-4-12 14:00:00', 'See your favorite metal bands up close and personal at the 2024 annual Bath Salts tour!', NULL, 25);
 INSERT INTO Concert_Profile
-VALUES(3, 'like a sickly butterfly', 2, 45, '2024-7-22 20:00:00', 'Slowdive, Alex G, my bloody valentine, and other Indie/Shoegaze artists join to build a heart-wrenching experience. Don''t forget your tissues!', NULL);
+VALUES(3, 'like a sickly butterfly', 2, 45, '2024-7-22 20:00:00', 'Slowdive, Alex G, my bloody valentine, and other Indie/Shoegaze artists join to build a heart-wrenching experience. Don''t forget your tissues!', NULL, 0);
 
 
 CREATE TABLE Staff (
