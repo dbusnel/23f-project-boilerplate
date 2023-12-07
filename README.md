@@ -1,4 +1,4 @@
-![app-icon](https://ibb.co/Jyxcnqz)
+![app-icon](https://i.ibb.co/0FBnqKf/Symphony.png)
 # Symphony - Find friends to go to concerts with!
 
 The application utilizes 3 Docker containers: 
