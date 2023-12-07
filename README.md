@@ -1,7 +1,7 @@
-# MySQL + Flask Boilerplate Project
+# Symphony - Find friends to go to concerts with!
 
-This repo contains a boilerplate setup for spinning up 3 Docker containers: 
-1. A MySQL 8 container for obvious reasons
+The application utilizes 3 Docker containers: 
+1. A MySQL 8 container for data storage.
 1. A Python Flask container to implement a REST API
 1. A Local AppSmith Server
 
