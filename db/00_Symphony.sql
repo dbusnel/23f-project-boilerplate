@@ -112,8 +112,8 @@ CREATE TABLE Artist_Profile (
 CREATE TABLE Messages (
     sender_id    INTEGER,
     recipient_id INTEGER,
-    content      TEXT NOT NULL,
-    PRIMARY KEY (sender_id, recipient_id),
+    content      VARCHAR(300),
+    PRIMARY KEY (sender_id, recipient_id, content),
     CONSTRAINT fk_sender FOREIGN KEY (sender_id) REFERENCES User (user_id)
         ON UPDATE CASCADE
         ON DELETE CASCADE,
@@ -185,7 +185,7 @@ CREATE TABLE Post (
     post_id      INTEGER AUTO_INCREMENT PRIMARY KEY,
     artist_id    INTEGER,
     artist_name  VARCHAR(100),
-    title        VARCHAR(50),
+    title        TEXT,
     content      MEDIUMTEXT,
     likes        INTEGER,
     created_at   DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -208,7 +208,7 @@ CREATE TABLE Post_Comments (
     comment_id   INTEGER AUTO_INCREMENT PRIMARY KEY,
     post_id      INTEGER,
     author_id    INTEGER,
-    title        VARCHAR(18),
+    title        TEXT,
     content      MEDIUMTEXT,
     likes        INTEGER,
     created_at   DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -287,7 +287,7 @@ CREATE TABLE Staff (
     concert_id      INTEGER,
     first_name      TEXT,
     last_name       TEXT,
-    email           VARCHAR(24),
+    email           VARCHAR(30),
     phone           VARCHAR(13),
     title           TEXT,
 
