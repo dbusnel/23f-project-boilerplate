@@ -6,13 +6,13 @@ from src import db
 artists = Blueprint('artists', __name__)
 
 # Get all the products from the database
-@artists.route('/artists', methods=['GET'])
+@artists.route('/artists', methods=['GET']) 
 def get_artists():
     # get a cursor object from the database
     cursor = db.get_db().cursor()
 
     # use cursor to query the database for a list of products
-    cursor.execute('SELECT * FROM ARTISTS')
+    cursor.execute('SELECT * FROM Artist') #Artist
 
     # grab the column headers from the returned data
     column_headers = [x[0] for x in cursor.description]
@@ -30,6 +30,8 @@ def get_artists():
         json_data.append(dict(zip(column_headers, row)))
 
     return jsonify(json_data)
+    
+
 
 # Get all genres associated with artist
 @artists.route('/artists/<id>/genres', methods=['GET', 'POST'])
