@@ -47,7 +47,7 @@ def get_customers():
 
 # Get all concerts from the DB
 @concerts.route('/concerts/<id>', methods=['GET', 'DELETE', 'PUT'])
-def get_customers(id):
+def get_customer(id):
     cursor = db.get_db().cursor()
     if request.method == 'GET':
         cursor.execute('select * from Concert_Profile where concert_id = ' + id)
