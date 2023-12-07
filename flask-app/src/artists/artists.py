@@ -63,7 +63,7 @@ def manage_genres(id):
         
         # get a cursor object from the database
         cursor = db.get_db().cursor()
-        cursor.execute('SELECT genre_id from Genre where genre_name = \'' + str(data['genre_name']) + '\' LIMIT 1')
+        cursor.execute('SELECT genre_id from Genre where genre_name = ' + str(data['genre_name']) + ' LIMIT 1')
 
         # grab the column headers from the returned data
         column_headers = [x[0] for x in cursor.description]
@@ -134,7 +134,7 @@ def getPosts(id):
     
 
 # Manage artist post with given ID
-@artists.route('/artists/<id>/posts/<postID>', methods=['GET', 'DELETE', 'PUT'])
+@artists.route('/artists/<id>/posts/<postID>', methods=['GET', 'DELETE'])
 def getPostFromID(id, postID):
     # get a cursor object from the database
     cursor = db.get_db().cursor()
@@ -160,19 +160,5 @@ def getPostFromID(id, postID):
         return jsonify(json_data)
     elif request.method == 'DELETE':
         cursor.execute("DELETE FROM Post WHERE post_id = " + postID)
-        db.getdb().commit()
-    elif request.method == 'PUT':
-        data = request.json
-        artist_id = data['artist_id']
-        artist_name = data['artist_name']
-        title = data['title']
-        content = data['content']
-
-        cursor.execute('UPDATE Post SET ' 
-                       + 'artist_id = '+ str(artist_id) + ', ' 
-                       + 'artist_name = \'' + artist_name + '\', ' 
-                       + 'title = \'' + title + '\', '  
-                       + 'content = \'' + content + '\'' 
-                       + ' where post_id = ' + str(postID))
         db.getdb().commit()
     

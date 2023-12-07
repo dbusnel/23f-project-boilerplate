@@ -25,11 +25,11 @@ def get_users():
 
 
 # get user with id
-@users.route('/users/<id>', methods=['GET', 'PUT'])
+@users.route('/users/<id>', methods=['GET', 'POST'])
 def get_user_with_id(id):
-    cursor = db.get_db().cursor()
     if request.method == 'GET':
         #obtain cursor
+        cursor = db.get_db().cursor()
         cursor.execute('SELECT * FROM USERS WHERE id = ' + str(id))
         column_headers = [x[0] for x in cursor.description]
         json_data = []
@@ -39,25 +39,6 @@ def get_user_with_id(id):
             json_data.append(dict(zip(column_headers, row)))
 
         return jsonify(json_data)
-    elif request.method == 'PUT':
-        data = request.json
-        user_id = data['user_id']
-        first_name = data['first_name']
-        last_name = data['last_name']
-        city = data['city']
-        email = data['email']
-        phone = data['phone']
-
-        cursor.execute('UPDATE User SET ' +
-                   'user_id = ' + str(user_id) + ', ' +
-                   'first_name = \'' + first_name + '\', ' +
-                   'last_name = \'' + last_name + '\', ' +
-                   'city = \'' + city + '\', ' +
-                   'email = \'' + email + '\', ' +
-                   'phone = \'' + phone + '\'' +
-                   ' WHERE user_id = ' + str(user_id))
-        db.get_db().commit()
-
     else:
         return 'CONDUCTOR WE HAVE A PROBLEM', 405
     
