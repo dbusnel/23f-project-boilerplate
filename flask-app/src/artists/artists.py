@@ -154,10 +154,10 @@ def getPosts(id):
         content = data['content']
 
         cursor.execute('INSERT INTO Post (artist_id, artist_name, title, content, likes) VALUES (' 
-                       + artist_id + ', ' 
-                       + artist_name + ', ' 
-                       + title + ', ' 
-                       + content + ', 0)')
+                       + str(artist_id) + ', ' 
+                       + "\'" + artist_name + '\', ' 
+                       + '\'' + title + '\'' + ', ' 
+                       + '\'' + content + '\', 0)')
         
         db.get_db().commit()
     
