@@ -8,16 +8,31 @@ concerts = Blueprint('concerts', __name__)
 # Get all concerts from the DB
 @concerts.route('/concerts', methods=['GET', 'POST'])
 def get_customers():
-    cursor = db.get_db().cursor()
     if request.method == 'GET':
-        cursor.execute('select * from Concert_Profile')
-        row_headers = [x[0] for x in cursor.description]
+        # get a cursor object from the database
+        cursor = db.get_db().cursor()
+
+        # use cursor to query the database for a list of products
+        cursor.execute('SELECT * FROM Concert_Profile') #Concert_Profile
+
+        # grab the column headers from the returned data
+        column_headers = [x[0] for x in cursor.description]
+
+        # create an empty dictionary object to use in 
+        # putting column headers together with data
         json_data = []
+
+        # fetch all the data from the cursor
         theData = cursor.fetchall()
+
+        # for each of the rows, zip the data elements together with
+        # the column headers. 
         for row in theData:
-            json_data.append(dict(zip(row_headers, row)))
-        return jsonify(json_data)
+            json_data.append(dict(zip(column_headers, row)))
+
+        return json_data
     elif request.method == 'POST':
+        cursor = db.get_db().cursor()
         data = request.json
         concert_id = data['concert_id']
         concert_name = data['concert_name']
