@@ -40,7 +40,7 @@ def get_artist(id):
     cursor = db.get_db().cursor()
 
     # use cursor to query the database for a list of products
-    cursor.execute('SELECT * FROM ARTISTS WHERE artist_id =' + id)
+    cursor.execute('SELECT * FROM ARTISTS WHERE artist_id =' + str(id))
 
     # grab the column headers from the returned data
     column_headers = [x[0] for x in cursor.description]
