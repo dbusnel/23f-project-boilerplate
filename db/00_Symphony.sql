@@ -331,3 +331,8 @@ INSERT INTO Artist_Concert_Bridge
 VALUES ('like a sickly butterfly', 2, 3, 2);
 INSERT INTO Artist_Concert_Bridge
 VALUES ('like a sickly butterfly', 3, 3, 2);
+
+
+SELECT genre_name FROM Genre_User JOIN Genre
+WHERE user_id = 1
+LIMIT 10;

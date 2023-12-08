@@ -163,3 +163,18 @@ def get_matches(id):
             json_data.append(dict(zip(column_headers, row)))
 
         return jsonify(json_data)
+
+# get top user genres
+@users.route('/users/<id>/topgenres', methods=['GET'])
+def get_topgenres(id):
+    #obtain cursor
+    cursor = db.get_db().cursor()
+    cursor.execute('SELECT genre_name FROM Genre_User JOIN Genre WHERE user_id = ' + str(id) +  ' LIMIT 10')
+    column_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+
+    for row in theData:
+        json_data.append(dict(zip(column_headers, row)))
+
+    return jsonify(json_data)
