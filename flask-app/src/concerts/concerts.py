@@ -65,6 +65,7 @@ def get_customer(id):
         #delete profile
         cursor.execute('delete from Concert_Profile where concert_id = ' + id + ")")
         db.get_db().commit()
+        return "success"
     elif request.method == 'PUT':
         data = request.json
         concert_id = data['concert_id']
@@ -88,3 +89,4 @@ def get_customer(id):
                + ' WHERE concert_id = ' + str(concert_id))
         
         db.get_db().commit()
+        return "success"

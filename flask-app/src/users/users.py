@@ -57,6 +57,7 @@ def get_user_with_id(id):
                    'phone = \'' + phone + '\'' +
                    ' WHERE user_id = ' + str(user_id))
         db.get_db().commit()
+        return "success"
 
     else:
         return 'CONDUCTOR WE HAVE A PROBLEM', 405
@@ -82,6 +83,7 @@ def issue_report(userid):
         cursor = db.get_db().cursor()
         cursor.execute(query)
         db.get_db().commit()
+        return "success"
 
 # get user likes
 @users.route('/users/<userid>/likes/', methods=['GET', 'POST', 'DELETE'])
@@ -113,6 +115,7 @@ def get_likes(userid):
         cursor = db.get_db().cursor()
         cursor.execute(query)
         db.get_db().commit()
+        return "success"
     elif request.method == 'DELETE':
         cursor = db.get_db().cursor()
         liked_id = data['liked_id']
@@ -120,6 +123,7 @@ def get_likes(userid):
         query = 'DELETE FROM User_Likes where liked_id = ' + liked_id
         cursor.execute(query)
         db.get_db().commit()
+        return "success"
 
 
 # get users who like the given user

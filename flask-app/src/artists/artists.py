@@ -117,6 +117,7 @@ def manage_genres(id):
         # now we can do the final query
         cursor.execute('INSERT INTO Genre_Artist VALUES (' + genreId + ', ' + id + ', ' + artistName + ')')
         db.get_db().commit()
+        return "success"
 
 
 
@@ -191,6 +192,7 @@ def getPostFromID(id, postID):
     elif request.method == 'DELETE':
         cursor.execute("DELETE FROM Post WHERE post_id = " + postID)
         db.getdb().commit()
+        return "success"
     elif request.method == 'PUT':
         data = request.json
         artist_id = data['artist_id']
@@ -205,4 +207,4 @@ def getPostFromID(id, postID):
                        + 'content = \'' + content + '\'' 
                        + ' where post_id = ' + str(postID))
         db.getdb().commit()
-    
+        return "success"
