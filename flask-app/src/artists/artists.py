@@ -40,7 +40,7 @@ def get_artist(id):
     cursor = db.get_db().cursor()
 
     # use cursor to query the database for a list of products
-    cursor.execute('SELECT * FROM ARTISTS WHERE artist_id =' + str(id))
+    cursor.execute('SELECT * FROM Artist_Profile WHERE artist_id =' + str(id))
 
     # grab the column headers from the returned data
     column_headers = [x[0] for x in cursor.description]
@@ -191,7 +191,7 @@ def getPostFromID(id, postID):
         return jsonify(json_data)
     elif request.method == 'DELETE':
         cursor.execute("DELETE FROM Post WHERE post_id = " + postID)
-        db.getdb().commit()
+        db.get_db().commit()
         return "success"
     elif request.method == 'PUT':
         data = request.json
