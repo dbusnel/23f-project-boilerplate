@@ -16,10 +16,7 @@ def get_customers():
         theData = cursor.fetchall()
         for row in theData:
             json_data.append(dict(zip(row_headers, row)))
-        the_response = make_response(jsonify(json_data))
-        the_response.status_code = 200
-        the_response.mimetype = 'application/json'
-        return the_response
+        return jsonify(json_data)
     elif request.method == 'POST':
         data = request.json
         concert_id = data['concert_id']
