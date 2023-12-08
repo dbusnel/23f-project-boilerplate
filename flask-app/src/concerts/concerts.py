@@ -30,7 +30,7 @@ def get_customers():
         for row in theData:
             json_data.append(dict(zip(column_headers, row)))
 
-        return json_data
+        return jsonify(json_data)
     elif request.method == 'POST':
         cursor = db.get_db().cursor()
         data = request.json
