@@ -16,7 +16,8 @@ The application utilizes 3 Docker containers:
 1. Build the images with `docker compose build`
 1. Start the containers with `docker compose up`.  To run in detached mode, run `docker compose up -d`. 
 
-**DEMO LINK: ** [insert link here]
+## Video Demo: https://drive.google.com/file/d/1lUYP0-r0fqaGfZfGSpuTDU0bCTYXUE6g/view?usp=sharing
+
 
 
 
