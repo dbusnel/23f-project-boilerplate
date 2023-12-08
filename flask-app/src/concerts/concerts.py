@@ -40,6 +40,7 @@ def get_customers():
                        + photo + ", "
                        + ticket_stock + ")")
         db.get_db().commit()
+        return 'Success!'
         
 
 # Get all concerts from the DB
