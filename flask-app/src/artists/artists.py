@@ -160,6 +160,7 @@ def getPosts(id):
                        + '\'' + content + '\', 0)')
         
         db.get_db().commit()
+        return "success"
     
 
 # Manage artist post with given ID
