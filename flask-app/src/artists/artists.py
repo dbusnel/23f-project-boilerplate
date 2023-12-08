@@ -147,6 +147,7 @@ def getPosts(id):
         return jsonify(json_data)
     elif request.method == 'POST':
         data = request.json
+        current_app.logger.info(data)
         artist_id = data['artist_id']
         artist_name = data['artist_name']
         title = data['title']
