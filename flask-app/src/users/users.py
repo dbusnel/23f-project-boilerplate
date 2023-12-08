@@ -30,7 +30,7 @@ def get_user_with_id(id):
     cursor = db.get_db().cursor()
     if request.method == 'GET':
         #obtain cursor
-        cursor.execute('SELECT * FROM USERS WHERE id = ' + str(id))
+        cursor.execute('SELECT * FROM User WHERE id = ' + str(id))
         column_headers = [x[0] for x in cursor.description]
         json_data = []
         theData = cursor.fetchall()
@@ -58,7 +58,6 @@ def get_user_with_id(id):
                    ' WHERE user_id = ' + str(user_id))
         db.get_db().commit()
         return "success"
-
     else:
         return 'CONDUCTOR WE HAVE A PROBLEM', 405
     
